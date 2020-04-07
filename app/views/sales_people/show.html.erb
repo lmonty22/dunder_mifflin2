@@ -9,3 +9,6 @@
 <h2> Sales Person Has An Office Relationship With... </h2>
 <div><%= @sales_person.significant_other %> 💕😍</div><br>
 
+<div> <%= link_to("Edit this Sales Person", edit_sales_person_path(@sales_person))%></div>
+<div> <%= link_to("Sales Person Index Page", sales_people_path) %></div>
+<div><%= link_to("Delete Sales Person", sales_person_path(@sales_person), method: :delete, data: { confirm: 'Are you sure?' })%></div>

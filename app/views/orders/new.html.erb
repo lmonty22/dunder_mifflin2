@@ -1,0 +1,21 @@
+<%=form_for @order do |f| %>
+<%= f.label :paper_type%>
+<%= f.text_field :paper_type %>
+<br>
+<%= f.label :number_of_reams %>
+<%= f.number_field :number_of_reams%>
+<br>
+<%= f.label :price_per_ream%>
+<%= f.number_field :price_per_ream%>
+<br>
+<%= f.label :sales_person_id%>
+<%= f.collection_select(:sales_person_id, SalesPerson.all, :id, :name)%>
+<br>
+<h4>Customer </h4>
+<%= f.fields_for :customer do |c| %>
+<%= c.label :name%>
+<%= c.text_field :name %>
+<%end %>
+
+<%= f.submit %>
+<% end %>

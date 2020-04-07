@@ -1,0 +1,6 @@
+<h1>All Orders </h1>
+
+<% @orders.each do |order| %>
+<div><%= link_to("Order Number: #{order.id} Sales Person: #{order.sales_person.name}", order_path(order)) %></div>
+<% end %>
+

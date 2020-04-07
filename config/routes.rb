@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # get '/', to: 'application#home'
+  # resources :application
+  get '/', to: 'sales_people#home'
+  get '/about', to: 'sales_people#about'
   resources :orders
   resources :sales_people
   resources :customers

@@ -1,7 +1,7 @@
 <h1>All Dunder Mifflin Sales People</h1>         
 <div>
 <% @sales_people.each do |salesperson| %>
-    <%= salesperson.name %><br>
+    <%= link_to salesperson.name, sales_person_path(salesperson) %><br>
     <% end %>
 </div>
 
