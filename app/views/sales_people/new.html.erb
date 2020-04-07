@@ -1,0 +1,19 @@
+<h1>New Hire Form</h1>
+<h2> Welcome to Scranton, PA - the best city in America</h2>
+<h3>.... This might be slightly inappropriate</h3>
+
+
+<%= form_for @sales_person do |s| %>
+<%= s.label :name %> <br><br>
+<%= s.text_field :name %> <br><br>
+<%= s.label :significant_other %> <br><br>
+<%= s.text_field :significant_other %> <br><br>
+<%= s.label :catch_phrase %> <br><br>
+<%= s.text_field :catch_phrase %> <br><br>
+<%= s.submit %>
+<% end %>
+
+
+
+
+

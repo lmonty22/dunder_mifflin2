@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 1
+  sales_person_id: 1
+  price_per_ream: 1
+  number_of_reams: 1
+  paper_type: MyString
+
+two:
+  customer_id: 1
+  sales_person_id: 1
+  price_per_ream: 1
+  number_of_reams: 1
+  paper_type: MyString

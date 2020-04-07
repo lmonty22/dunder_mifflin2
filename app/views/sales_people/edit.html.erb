@@ -1,0 +1,12 @@
+<h1>Edit Sales Person </h1>
+
+<%= form_for @sales_person do |s| %>
+<%= s.label :name %>
+<%= s.text_field :name %><br>
+<%= s.label :catch_phrase %>
+<%= s.text_area :catch_phrase %><br>
+<%= s.label :significant_other %>
+<%= s.text_field :significant_other %><br>
+<%= s.submit %>
+<% end %>
+s

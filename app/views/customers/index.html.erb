@@ -1,0 +1,10 @@
+<h1>All Customer Page</h1>
+
+<% @customers.each do |c| %>
+    <div><%= link_to c.name, customer_path(c) %> </div>
+<% end %>
+<br>
+<br>
+<div> <%= link_to "Create a New Customer", new_customer_path %> </div>
+
+

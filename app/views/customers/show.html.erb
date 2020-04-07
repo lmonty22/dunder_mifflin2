@@ -1,0 +1,12 @@
+<h1><%= @customer.name %></h1>
+
+<h2> Customer Orders </h2>
+<% @customer.orders.each do |order| %>
+    <div> Purchase Order Number: <%= order.id %> </div>
+<% end %>
+
+
+
+<div> <%= link_to("Customer Index Page", customers_path) %></div>
+
+<div><%= link_to "Delete Customer", customer_path(@customer), method: :delete, data: { confirm: 'Are you sure?' }%></div>

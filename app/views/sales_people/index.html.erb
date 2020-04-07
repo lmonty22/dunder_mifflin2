@@ -1,0 +1,8 @@
+<h1>All Dunder Mifflin Sales People</h1>         
+<div>
+<% @sales_people.each do |salesperson| %>
+    <%= salesperson.name %><br>
+    <% end %>
+</div>
+
+<div><%= link_to "Add a new hire", new_sales_person_path %></div>
