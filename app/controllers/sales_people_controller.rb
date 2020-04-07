@@ -28,9 +28,11 @@ class SalesPeopleController < ApplicationController
     end
 
     def destroy
-
+        @sales_peron = SalesPerson.find(params[:id])
+        @sales_person.destroy
+        redirect_to sales_people_path
     end
-    
+
     private
     def sales_person_params
         params.require(:sales_person).permit(:name, :catch_phrase, :significant_other)
