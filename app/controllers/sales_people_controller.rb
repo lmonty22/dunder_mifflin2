@@ -27,6 +27,10 @@ class SalesPeopleController < ApplicationController
         redirect_to sales_person_path(@sales_person)
     end
 
+    def destroy
+
+    end
+    
     private
     def sales_person_params
         params.require(:sales_person).permit(:name, :catch_phrase, :significant_other)
