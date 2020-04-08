@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DunderMifflinPaperCompany</title>
+    <title>Dunder Mifflin Paper Company</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,17 @@
   </head>
 
   <body>
+    <nav class="nav_bar">
+    <ul class="nav_bar">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About Dunder Mifflin</a></li> 
+      <li><a href="/sales_people">Sales People</a></li>
+      <li><a href="/orders/new">Submit an Order</a></li>
+      <li><a href="/orders">Review all Orders</a></li>
+      <li><a href="/customers">Customers</a></li>
+    </ul>
+  </div>
+</nav>
     <%= yield %>
   </body>
 </html>
