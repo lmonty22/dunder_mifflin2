@@ -13,6 +13,17 @@
 <div><%= @sales_person.significant_other %> 💕😍</div><br>
 <%end %>
 
+<h2>Sales</h2>
+<div>Number of sales: <%= @sales_person.order_count%></div>
+<div>Total Revenue: $<%= @sales_person.sales_rev%></div>
+
+<ul>
+<div><% @sales_person.orders.each do |o|%>
+    <li><%= link_to "Order Number: #{o.id}", order_path(o)%></li>
+<%end%>
+</div>
+
+</ul>
 <div> <%= link_to("Edit this Sales Person", edit_sales_person_path(@sales_person))%></div>
 <div> <%= link_to("Sales Person Index Page", sales_people_path) %></div>
 <div><%= link_to("Delete Sales Person", sales_person_path(@sales_person), method: :delete, data: { confirm: 'Are you sure?' })%></div>

@@ -4,5 +4,15 @@
     <%= link_to salesperson.name, sales_person_path(salesperson) %><br>
     <% end %>
 </div>
-
+<br>
 <div><%= link_to "Add a new hire", new_sales_person_path %></div>
+
+<h2>Sales Leader Board</h2>
+<% leaderboard =  SalesPerson.leaderboard %>
+<ol>
+
+<% leaderboard.each do |a| %>
+<li> <%= a[0] %> - $<%= a[1]%> </li>
+<% end %>
+</ol>
+
