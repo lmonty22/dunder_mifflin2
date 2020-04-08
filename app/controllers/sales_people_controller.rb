@@ -22,8 +22,13 @@ class SalesPeopleController < ApplicationController
     end
 
     def create
-        @sales_person = SalesPerson.create(sales_person_params)
-        redirect_to sales_person_path(@sales_person)
+        @sales_person = SalesPerson.new(sales_person_params)
+        if @sales_person.valid?
+            @sales_person.save
+            redirect_to sales_person_path(@sales_person)
+        else
+            render :new
+        end
     end
 
     def edit
@@ -37,7 +42,7 @@ class SalesPeopleController < ApplicationController
     end
 
     def destroy
-        @sales_peron = SalesPerson.find(params[:id])
+        @sales_person = SalesPerson.find(params[:id])
         @sales_person.destroy
         redirect_to sales_people_path
     end

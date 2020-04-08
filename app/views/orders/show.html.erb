@@ -1,7 +1,11 @@
 <h1>Order Details</h1>
 <h2>Order Number:<%= @order.id%></h2>
 <h3>Sales Person: <%= link_to(@order.sales_person.name, sales_person_path(@order.sales_person)) %></h3>
+<div>Customer: <%= link_to(@order.customer.name, customer_path(@order.customer)) %></div>
 <div>Typer of Paper <%= @order.paper_type %></div>
 <div>Number of Reams: <%= @order.number_of_reams %></div>
 <div>Price Per Ream: $<%= @order.price_per_ream %></div>
 <div>Total Cost: $<%= @order.number_of_reams*@order.price_per_ream %> </div>
+
+<div><%= link_to 'Edit this Order', edit_order_path(@order)%></div>
+<div><%= link_to 'Delete this Order', order_path(@order), method: :delete, data: { confirm: 'Are you sure?' }%>

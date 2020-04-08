@@ -2,7 +2,7 @@
 
 <h2> Customer Orders </h2>
 <% @customer.orders.each do |order| %>
-    <div> Purchase Order Number: <%= order.id %> </div>
+    <div> <%= link_to "Purchase Order Number: #{order.id}", order_path(order) %> </div>
 <% end %>
 <br>
 

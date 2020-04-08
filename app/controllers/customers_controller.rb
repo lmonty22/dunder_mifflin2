@@ -8,8 +8,13 @@ class CustomersController < ApplicationController
     end
 
     def create
-        @customer = Customer.create(customer_params)
-        redirect_to customer_path(@customer)
+        @customer = Customer.new(customer_params)
+        if @customer.valid?
+            @customer.save
+            redirect_to customer_path(@customer)
+        else
+            render :new
+        end
     end
 
     def show

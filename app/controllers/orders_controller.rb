@@ -14,8 +14,13 @@ class OrdersController < ApplicationController
     end
 
     def create
-        @order = Order.create(order_params)
-        redirect_to order_path(@order)
+        @order = Order.new(order_params)
+        if @order.valid?
+            @order.save
+            redirect_to order_path(@order)
+        else
+            render :new
+        end
     end
 
     def edit

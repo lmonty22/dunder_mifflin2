@@ -7,7 +7,11 @@
 <%= @sales_person.catch_phrase %><br>
 
 <h2> Sales Person Has An Office Relationship With... </h2>
+<% if @sales_person.significant_other.empty?%>
+    <div>    💔 💔  </div>  
+<%else %>
 <div><%= @sales_person.significant_other %> 💕😍</div><br>
+<%end %>
 
 <div> <%= link_to("Edit this Sales Person", edit_sales_person_path(@sales_person))%></div>
 <div> <%= link_to("Sales Person Index Page", sales_people_path) %></div>

@@ -1,4 +1,5 @@
 <h1>New Customer Form</h1>
+<%= render partial: "shared/error", locals: {new_object: @customer} %>
 
 <%= form_for @customer do |f| %>
     <%= f.label :name %> <br><br>
@@ -6,6 +7,4 @@
 
     <%= f.submit %>
 <% end %>
-
-
 
